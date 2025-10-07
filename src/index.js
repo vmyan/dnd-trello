@@ -1,4 +1,4 @@
-import Board from "./board";
+import Board from "./board.js";
 import "./style.css";
 
 const container = document.getElementById("board");

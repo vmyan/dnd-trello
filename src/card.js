@@ -16,7 +16,6 @@ export default class Card {
       <button class="delete-card">✖</button>
     `;
 
-    // Удаление карточки
     const deleteBtn = card.querySelector(".delete-card");
     deleteBtn.addEventListener("click", () => {
       card.remove();

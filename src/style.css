@@ -38,31 +38,29 @@ body {
   padding: 10px;
   background-color: #fff;
   border-radius: 6px;
-  margin-bottom: 10px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:active {
+.card.dragging {
+  opacity: 0.8;
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   cursor: grabbing;
+}
+
+.card.placeholder {
+  background-color: rgba(0,0,0,0.1);
+  border: 2px dashed #aaa;
+  height: 50px;
+  margin: 6px 0;
+  border-radius: 6px;
 }
 
 .card:hover .delete-card {
   opacity: 1;
-}
-
-.card-image {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-top: 6px;
-  object-fit: cover;
-  display: block;
-}
-
-.card-image:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease-in-out;
 }
 
 .delete-card {
@@ -97,7 +95,7 @@ body {
 }
 
 /* Новый инлайн редактор */
-.new-card-input-wrapper {
+.new-card-wrapper {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -134,19 +132,19 @@ body {
 }
 
 .save-card {
-      border-radius: 20px;
-    background-color: #56ca75;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 5px 20px;
-    cursor: pointer;
+  border-radius: 20px;
+  background-color: #56ca75;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 5px 20px;
+  cursor: pointer;
 }
 
 .cancel-card {
-    border-radius: 20px;
-    background-color: #ed4656;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 5px 20px;
-    cursor: pointer;
+  border-radius: 20px;
+  background-color: #ed4656;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 5px 20px;
+  cursor: pointer;
 }
